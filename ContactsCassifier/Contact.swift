@@ -17,7 +17,6 @@ final class Contact: Identifiable {
     var note: String?
     var createdAt: Date
     var category: Category?  // Relationship is automatically inferred, I tried other methods tho
-    var birthday: Date?
     
     init(
         id: UUID = UUID(),
@@ -27,7 +26,6 @@ final class Contact: Identifiable {
         note: String? = nil,
         category: Category? = nil,
         createdAt: Date = Date(),
-        birthday: Date? = nil
     ) {
         self.id = id
         self.name = name
@@ -35,8 +33,6 @@ final class Contact: Identifiable {
         self.email = email
         self.note = note
         self.category = category
-        self.createdAt = createdAt
-        self.birthday = birthday
-    }
+        self.createdAt = createdAt    }
 }
 
